@@ -1,0 +1,64 @@
+:root {
+  --bg:        #04060c;
+  --surface:   #080d18;
+  --border:    #1a2540;
+  --border-hi: #2a3f6a;
+  --text:      #c8d8f0;
+  --text-dim:  #4a6080;
+  --text-mono: #7eb8d4;
+  --accent:    #00d4ff;
+  --accent-2:  #0066ff;
+  --green:     #00ff88;
+  --yellow:    #ffd600;
+  --red:       #ff3a3a;
+  --obj1:      #00aaff;
+  --obj2:      #ff6600;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  overflow: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 2px; }
+
+/* Input base */
+input[type="number"], input[type="text"], select {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-mono);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+input[type="number"]:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent)22;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
